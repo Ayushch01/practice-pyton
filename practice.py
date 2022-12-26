@@ -1,26 +1,20 @@
-'''str1=input("enter value")
-x=" "
- 
-for i in str1:
-	if i==".":
- 		print(x)
- 		x=" "
+# x=int(input("enter the value:"))
+# fact=1
+# if x==0 and x==1:
+# 	fact=1
+# else:
+# 	for i in range(1,x+1):
+# 		fact=fact*i
+# print(fact)
+def func(x):
+	fact=1
+	if x==0 and x==1:
+		fact=1
 	else:
- 		x=x+i
-
-print(x)'''
-a=12
-b=14
-c=10
-smallest=a
-# if smallest>a:
-# 	smallest,a=a,smallest
-if smallest>b:
-	smallest=b
-if smallest>c:
-	smallest=c
-
-print(smallest)
-
-
-
+		for i in range(1,x+1):
+			fact=fact*i
+	return fact
+for i in range(2):
+	choice=int(input("enter your values : "))
+	fact1=func(choice)
+	print(fact1)

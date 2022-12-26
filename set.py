@@ -1,0 +1,10 @@
+star={2,4,6,2,11,12,"yes","no",2.4,255,0+1j}
+print(star)
+star.add(23)
+print(star)
+star.pop()
+print(star)
+star.remove(255)
+print(star)
+star.discard(11)
+print(star)
