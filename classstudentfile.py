@@ -14,14 +14,33 @@ class student:
         print("Year of joining :",self.year)
         print("course :",self.course)
         print("contact number :",self.contact)
+    
+
     def generate_rollno(self):
         global rollno
         rollno=rollno+1
         self.rollno=rollno
         print("Roll no. of students :",self.rollno)
+class datafile(student):
+    def __init__(self):
+        super().__init__()
+    def dwrite(self):
+        
+        file=open("studentsfile.txt","a")
+        data = "{},{},{},{},{},{}\n".format(self.name,self.fathername,self.age,self.year,self.course,self.contact)
+        file.write(data)
+        file.close()
+        return data
+def rollgen(data):
+    data = data
+    file1 = open("details.txt","a")
+    fulldata = "{},{}\n".format(student.rollno,data)
+    file1.write(fulldata)
+    file1.close()
+df = datafile()
+df.generate_rollno()
+# df.show_detail()
+x = df.dwrite()
+df.rollgen(x)
 
-print(rollno)       
-s1=student()
-s1.generate_rollno()
-s1.show_detail()
-print(rollno)
+
